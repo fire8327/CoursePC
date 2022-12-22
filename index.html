@@ -8,8 +8,116 @@
     <link rel="stylesheet" href="Assets/CSS/custom.css">
     <title>Главная</title>
 </head>
-<body>
-    <header></header>
+<body class="bg-[url('Assets/Images/body/bg.png')]">
+    <header class="flex flex-col px-4 bg-[url('Assets/Images/header/bg.png')] h-[830px]">        
+        <nav class="container mx-auto flex justify-between py-5 lg:py-10 items-center">
+            <div class="flex flex-col">
+                <img src="Assets/Images/header/logo.svg" alt="">
+            </div>
+            <div class="hidden lg:flex items-center justify-between text-white xl:w-9/12">
+                <div class="flex">
+                    <a href="" class="mx-4 xl:mx-7">Главная</a>
+                    <a href="" class="mx-4 xl:mx-7">Курсы</a>
+                    <a href="" class="mx-4 xl:mx-7">Расписание</a>
+                    <a href="" class="mx-4 xl:mx-7">Преподаватели</a>
+                    <a href="" class="mx-4 xl:mx-7">Рассылка</a>
+                    <a href="" class="mx-4 xl:mx-7">Контакты</a>
+                </div>       
+                <button class="bg-gradient-to-r from-[#C89AFC] to-[#7C6AFA] rounded-full py-2 px-5">Зайти в кабинет</button>         
+            </div>
+            <button class="p-2 lg:hidden" id="toggler">
+                <img src="Assets/Images/header/menu.svg" alt="">
+            </button>
+        </nav>
+        <div class="w-full flex">
+            <div id="mobile__nav" class="bg-mainbg fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 transform translate-x-full transition duration-300 ease-in-out z-30">
+                <svg id="toggler__expanded" class="text-white w-6 h-6 top-4 left-4 cursor-pointer ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                <div class="flex flex-col h-full mt-4 text-white p-4">
+                    <a href="" class="my-4 text-xl">Главная</a>
+                    <a href="" class="my-4 text-xl">Курсы</a>
+                    <a href="" class="my-4 text-xl">Расписание</a>
+                    <a href="" class="my-4 text-xl">Преподаватели</a>
+                    <a href="" class="my-4 text-xl">Рассылка</a>
+                    <a href="" class="my-4 text-xl">Контакты</a>
+                    <button class="bg-gradient-to-r from-[#C89AFC] to-[#7C6AFA] rounded-full py-2 px-5 w-fit my-4">Зайти в кабинет</button>         
+                </div>
+            </div>
+            <div class="w-full h-screen fixed top-0 right-0 hidden z-10 bg-gray-900 opacity-70" id="overlay"></div>
+        </div>
+
+        <div class="container mx-auto flex flex-col justify-center text-white grow">
+            <p class="text-4xl md:text-5xl lg:text-6xl font-bold lg:w-1/2">Первый курс по компьютерной сборке</p>
+            <div class="flex mt-12 w-full md:w-96 justify-between">
+                <div class="flex flex-col bg-timer w-1/4 mr-4 items-center justify-center">
+                    <p class="text-3xl lg:text-4xl">18</p>
+                    <p class="opacity-[0.4]">Дней</p>
+                </div>
+                <div class="flex flex-col bg-timer w-1/4 mr-4 items-center justify-center">
+                    <p class="text-3xl lg:text-4xl">18</p>
+                    <p class="opacity-[0.4]">Часов</p>
+                </div>
+                <div class="flex flex-col bg-timer w-1/4 mr-4 items-center justify-center">
+                    <p class="text-3xl lg:text-4xl">18</p>
+                    <p class="opacity-[0.4]">Минут</p>
+                </div>
+                <div class="flex flex-col bg-timer w-1/4 mr-4 items-center justify-center">
+                    <p class="text-3xl lg:text-4xl">18</p>
+                    <p class="opacity-[0.4]">Секунд</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="w-full bg-timer">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center py-4 lg:py-9 text-white w-full px-4">
+            <div class="flex flex-col md:flex-row md:items-center w-full lg:w-auto justify-between lg:justify-start order-last md:order-first">
+                <div class="flex flex-col lg:mr-20 mt-4 md:mt-0 order-last md:order-first">
+                    <button class="bg-gradient-to-r from-[#DF5950] to-[#451046] rounded-full py-2 px-5">Заказать курс</button>         
+                </div>
+                <div class="flex flex-col w-full md:w-64 lg:mr-20 mt-4 lg:mt-0">
+                    <div class="flex justify-between">
+                        <p class="opacity-[0.4]">Учеников всего:</p>
+                        <p class="font-bold">200</p>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <p class="opacity-[0.4]">Успешно закончили курс:</p>
+                        <p class="font-bold">190</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-full lg:w-auto lg:grow">
+                <div class="flex justify-between mt-2 w-64">
+                    <p class="opacity-[0.4]">Заработано учениками:</p>
+                    <p class="font-bold">400 000₽</p>
+                </div>
+                <div class="w-full bg-white h-1.5 dark:bg-gray-700 mt-2">
+                    <div class="bg-gradient-to-r from-[#DF5950] to-[#451046] h-1.5 w-[40%]"></div>
+                </div>
+                <div class="flex justify-between mt-2 w-full">
+                    <p class="opacity-[0.4]">0</p>
+                    <p class="opacity-[0.4]">1 000 000₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto px-4 flex flex-col md:flex-row w-full mt-20 lg:mt-40">
+        <div class="w-full md:w-1/2">
+            <!-- <div class="w-full bg-gradient-to-tr from-[#C89AFC] to-[#7C6AFA] p-5">
+                <div class="flex h-full w-full items-center justify-center bg-[url('Assets/Images/body/bg.png')] bg-right back">
+                  <img src="Assets/Images/about/pc.png" alt="">
+                </div>
+            </div> -->
+            <img src="Assets/Images/about/about__img.png" alt="">
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col text-white justify-center mt-4 md:0">
+            <p class="text-4xl">Чем мы занимаемся?</p>
+            <p class="w-full mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget neque, dignissim et feugiat elit augue in suspendisse egestas. Dictum vestibulum mi et sed nunc, orci fermentum vestibulum, morbi. Et neque, adipiscing sapien sem senectus praesent aenean consequat. Aenean facilisi turpis aliquet fringilla. Nunc sem felis sed interdum feugiat mattis elit, sollicitudin. Quam pharetra rhoncus risus, cursus id elementum aliquet. Nullam turpis arcu malesuada arcu interdum placerat nisi, lobortis. </p>
+        </div>
+    </div>
 
     <footer></footer>
     
